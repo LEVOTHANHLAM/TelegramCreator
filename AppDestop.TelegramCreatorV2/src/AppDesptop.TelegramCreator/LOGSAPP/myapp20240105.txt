@@ -1,0 +1,220 @@
+2024-01-05 07:47:21.178 +07:00 [ERR] The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+2024-01-05 07:47:21.400 +07:00 [ERR] System.TypeInitializationException: The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+ ---> System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AppDesptop.TelegramCreator.Program.CreateHostBuilder() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 105
+   at AppDesptop.TelegramCreator.Program..cctor() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 21
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+   --- End of inner exception stack trace ---
+   at AppDesptop.TelegramCreator.Program.Main() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 48
+2024-01-05 07:47:21.401 +07:00 [ERR] Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+2024-01-05 07:48:32.402 +07:00 [ERR] The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+2024-01-05 07:48:32.474 +07:00 [ERR] System.TypeInitializationException: The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+ ---> System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AppDesptop.TelegramCreator.Program.CreateHostBuilder() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 105
+   at AppDesptop.TelegramCreator.Program..cctor() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 21
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+   --- End of inner exception stack trace ---
+   at AppDesptop.TelegramCreator.Program.Main() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 48
+2024-01-05 07:48:32.474 +07:00 [ERR] Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+2024-01-05 07:54:15.841 +07:00 [ERR] The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+2024-01-05 07:54:15.904 +07:00 [ERR] System.TypeInitializationException: The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+ ---> System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.InitializeServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AppDesptop.TelegramCreator.Program.CreateHostBuilder() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 105
+   at AppDesptop.TelegramCreator.Program..cctor() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 21
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+ ---> System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitScopeCache(ServiceCallSite scopedCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitDisposeCache(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitConstructor(ConstructorCallSite constructorCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.VisitRootCache(ServiceCallSite singletonCallSite, CallSiteValidatorState state)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateCallSite(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.OnCreate(ServiceCallSite callSite)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+   --- End of inner exception stack trace ---
+   at AppDesptop.TelegramCreator.Program.Main() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 48
+2024-01-05 07:54:15.904 +07:00 [ERR] Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.Forms.fLogin Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.Forms.fLogin': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.) (Error while validating the service descriptor 'ServiceType: AppDesptop.TelegramCreator.fMain Lifetime: Singleton ImplementationType: AppDesptop.TelegramCreator.fMain': Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions' from singleton 'AppDesptop.TelegramCreator.fMain'.)
+2024-01-05 07:55:49.613 +07:00 [ERR] The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+2024-01-05 07:55:49.893 +07:00 [ERR] System.TypeInitializationException: The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+ ---> Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Write[T](DiagnosticSource diagnosticSource, String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AppDesptop.TelegramCreator.Program.CreateHostBuilder() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 105
+   at AppDesptop.TelegramCreator.Program..cctor() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 21
+   --- End of inner exception stack trace ---
+   at AppDesptop.TelegramCreator.Program.Main() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 48
+2024-01-05 07:55:49.893 +07:00 [ERR] The host was aborted.
+2024-01-05 07:56:09.344 +07:00 [ERR] The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+2024-01-05 07:56:09.414 +07:00 [ERR] System.TypeInitializationException: The type initializer for 'AppDesptop.TelegramCreator.Program' threw an exception.
+ ---> Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.Write[T](DiagnosticSource diagnosticSource, String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AppDesptop.TelegramCreator.Program.CreateHostBuilder() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 105
+   at AppDesptop.TelegramCreator.Program..cctor() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 21
+   --- End of inner exception stack trace ---
+   at AppDesptop.TelegramCreator.Program.Main() in D:\working\ToolsQnibot\ToolsRegQnibotV2\Telegramcreator\AppDestop.TelegramCreatorV2\src\AppDesptop.TelegramCreator\Program.cs:line 48
+2024-01-05 07:56:09.414 +07:00 [ERR] The host was aborted.

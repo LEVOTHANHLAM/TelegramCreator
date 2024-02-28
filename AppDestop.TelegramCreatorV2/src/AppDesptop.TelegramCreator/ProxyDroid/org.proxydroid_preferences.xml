@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="profileValues">1|0</string>
+    <string name="profile">1</string>
+    <string name="proxyType">http</string>
+    <boolean name="isAutoSetProxy" value="true" />
+    <string name="ssid"></string>
+    <boolean name="isConnecting" value="false" />
+    <string name="excludedSsid"></string>
+    <string name="profileEntries">Profile 1|New Profile</string>
+    <boolean name="isAuth" value="true" />
+    <string name="password">proxy11</string>
+    <boolean name="settings_key_notif_vibrate" value="true" />
+    <boolean name="isPAC" value="false" />
+    <string name="port">8080</string>
+    <boolean name="isBypassApps" value="false" />
+    <boolean name="isRunning" value="true" />
+    <string name="host">108.62.187.212</string>
+    <boolean name="3.2.0" value="true" />
+    <string name="user">e12582</string>
+</map>
